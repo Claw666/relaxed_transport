@@ -1,6 +1,6 @@
 # The line below is used to run the script. It is of the form
 # python create_spotify_playlist.py <user_id> <vibe> <duration>
-# python create_spotify_playlist.py pblanchet1234 motivational 800
+# python create_spotify_playlist.py pblanchet1234 chill 800
 
 from datetime import datetime
 import spotipy
@@ -50,16 +50,17 @@ def call_playlist(sp,creator, playlist_id,duration):
                 adapted_playlist.append(row["track_id"])
                 sum_length += row["duration_ms"]/1000
 
-    print(adapted_playlist)
     return adapted_playlist
 
-def main(username,vibe,duration):
+def create_playlist(username,vibe,duration):
 
     # All our variables needed for later
     cid = '64d54961573f46d28db7f25ae2450a14' # client_id of the Spotify app
     secret = '60d8195d48d54a65ae9def882081124c' # Secret id of the Spotify app
     scope = "playlist-modify-public" # Scope of our requests
-    playlist_name = "Trip " + vibe + " " + datetime.now().strftime("%d/%m/%Y %H:%M") # Playlist name
+    creation_time = datetime.now()
+    creation_time_str = creation_time.strftime("%d/%m/%Y %H:%M")
+    playlist_name = "Trip " + vibe + " " + creation_time_str # Playlist name
     playlist_vibe = { # Dictionary that stores the id of playlist we want
         "chill":"0vvXsWCC9xrXsKd4FyS8kM",
         "motivational":"3jxMoEAFkRawkZJlY9Yuke",
@@ -77,6 +78,18 @@ def main(username,vibe,duration):
     playlist_id = GetPlaylistID(username, playlist_name,sp) # We get the id of the playlist created
     songs = call_playlist(sp,"spotify",playlist_vibe[vibe],duration) # We collect the songs according to the vibe
     sp.user_playlist_add_tracks(username, playlist_id, songs) # We add the tracks to the playlist
+    
+    value_return = [
+        username,
+        vibe,
+        playlist_name,
+        playlist_id,
+        duration,
+        creation_time,
+        str(songs)
+    ]
+    
+    return value_return
 
 if __name__ == "__main__":
     main(sys.argv[1],sys.argv[2],sys.argv[3])
