@@ -12,3 +12,12 @@ Also, here is a screenshot of our lambda functions in the aws console:
 <img width="1027" alt="image" src="https://user-images.githubusercontent.com/59032005/160786680-79f27fa3-8b16-4540-8a56-d3474c0d110b.png">
 
 As you can see lambda functions are just pieces of code that are run in the cloud by AWS. No need to take care of servers, this is a serverless architecture! Which means instant scalability and great performances.
+
+### Fronted - React Native, Tailwind CSS, React
+
+We used Rect Native as it makes development easier for both Android and iOS, at the same time! You can see a screenshot of the developed UI, which is user friendly and easy to use. Built with modularity so it is easy to scale and add new content. We also used Expo to test different configurations and devices.
+
+To test the frontend you need to add a Google Maps API which is freely obtainable at the moment. 
+
+
+
