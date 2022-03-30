@@ -1,6 +1,10 @@
 # Move'round - Your relaxed transport planner in Amsterdam
 
-Welcome to the repository of the application Move'round! If you are here, it's probably because you want to appreciate our beautiful code. Well you are at the right place. Our app was build on AWS using AWS API Gateway to build our own API and AWS Lambda Functions to run our backend. 
+Welcome to the repository of the application Move'round! If you are here, it's probably because you want to appreciate our beautiful code. Well you are at the right place. 
+
+### Backend - MariaDB, AWS Lambda
+
+Our app was build on AWS using AWS API Gateway to build our own API and AWS Lambda Functions to run our backend. 
 
 Therefore the code that you see in the Jupyter notebooks and python functions is actually the code that is implemented in the lambda functions. Sadly an API cannot be exported but here is a screeshot of what it looks like in the aws console : 
 
