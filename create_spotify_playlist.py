@@ -55,8 +55,8 @@ def call_playlist(sp,creator, playlist_id,duration):
 def create_playlist(username,vibe,duration):
 
     # All our variables needed for later
-    cid = '64d54961573f46d28db7f25ae2450a14' # client_id of the Spotify app
-    secret = '60d8195d48d54a65ae9def882081124c' # Secret id of the Spotify app
+    cid = 'CLIENT_ID_HERE' # client_id of the Spotify app
+    secret = 'SECRET_ID_HERE' # Secret id of the Spotify app
     scope = "playlist-modify-public" # Scope of our requests
     creation_time = datetime.now()
     creation_time_str = creation_time.strftime("%d/%m/%Y %H:%M")
