@@ -1,6 +1,10 @@
 # Move'round - Your relaxed transport planner in Amsterdam
 
-Welcome to the repository of the application Move'round! If you are here, it's probably because you want to appreciate our beautiful code. Well you are at the right place. Our app was build on AWS using AWS API Gateway to build our own API and AWS Lambda Functions to run our backend. 
+Welcome to the repository of the application Move'round! If you are here, it's probably because you want to appreciate our beautiful code. Well you are at the right place. 
+
+### Backend - MariaDB, AWS Lambda
+
+Our app was build on AWS using AWS API Gateway to build our own API and AWS Lambda Functions to run our backend. 
 
 Therefore the code that you see in the Jupyter notebooks and python functions is actually the code that is implemented in the lambda functions. Sadly an API cannot be exported but here is a screeshot of what it looks like in the aws console : 
 
@@ -17,7 +21,6 @@ As you can see lambda functions are just pieces of code that are run in the clou
 
 We used Rect Native as it makes development easier for both Android and iOS, at the same time! You can see a screenshot of the developed UI, which is user friendly and easy to use. Built with modularity so it is easy to scale and add new content. We also used Expo to test different configurations and devices.
 
+<img width="1027" alt="image3" src="https://github.com/Claw666/relaxed_transport/blob/main/Screenshots/image1.jpeg">
+
 To test the frontend you need to add a Google Maps API which is freely obtainable at the moment. 
-
-
-
